@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Neon - Conhecimentos Gerais</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Desenhos decorativos -->
+    <div class="floating-shapes">
+        <span class="shape shape1">⭐</span>
+        <span class="shape shape2">🧠</span>
+        <span class="shape shape3">🚀</span>
+        <span class="shape shape4">💡</span>
+        <span class="shape shape5">🎯</span>
+        <span class="shape shape6">✨</span>
+    </div>
+
+    <div class="quiz-container">
+
+        <div id="quiz">
+
+            <div class="top-info">
+
+                <div class="question-info">
+                    <span id="page-indicator">Pergunta 1 de 12</span>
+
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                </div>
+
+                <div class="game-info">
+
+                    <div class="lives" id="lives">
+                        <span>❤️</span>
+                        <span>❤️</span>
+                        <span>❤️</span>
+                        <span>❤️</span>
+                        <span>❤️</span>
+                    </div>
+
+                    <div class="score-box">
+                        ⭐ <span id="score-live">0</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="character" id="character">
+                🧠
+            </div>
+
+            <div class="combo" id="combo">
+                🔥 Combo: 0
+            </div>
+
+            <h2 id="question">Carregando pergunta...</h2>
+
+            <div id="options" class="options-container"></div>
+
+            <div id="feedback" class="feedback"></div>
+
+            <button
+                id="next-btn"
+                class="btn-next"
+                onclick="nextQuestion()"
+                disabled
+            >
+                Próxima Pergunta ➜
+            </button>
+
+        </div>
+
+        <!-- Tela de resultado -->
+
+        <div id="result-screen" class="result-screen hide">
+
+            <div class="result-character" id="result-character">
+                🏆
+            </div>
+
+            <h2>Fim do Quiz! 🎉</h2>
+
+            <p class="final-message" id="final-message">
+                Mandou muito bem!
+            </p>
+
+            <div class="final-score">
+                <span id="score">0</span> / 12
+            </div>
+
+            <p>
+                Você terminou com
+                <strong id="final-lives">5</strong>
+                ❤️
+            </p>
+
+            <button
+                class="btn-restart"
+                onclick="restartQuiz()"
+            >
+                🔄 Jogar Novamente
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Área dos confetes -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
